@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.3 on win32)" generated="20200315 20:30:05.474" rpa="false">
+<suite id="s1" name="UserGuide" source="D:\Tools\Projects\git\RobotFramework\UserGuide">
+<suite id="s1-s1" name="Tests" source="D:\Tools\Projects\git\RobotFramework\UserGuide\tests">
+<suite id="s1-s1-s1" name="Datetime Example01" source="D:\Tools\Projects\git\RobotFramework\UserGuide\tests\Datetime_Example01.robot">
+<test id="s1-s1-s1-t1" name="Timestamp">
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>2014-06-11 10:07:42.000</arg>
+</arguments>
+<assign>
+<var>${date1}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.591" level="INFO">${date1} = 2014-06-11 10:07:42.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.586" endtime="20200315 20:30:05.591"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>20140611 100742</arg>
+<arg>result_format=timestamp</arg>
+</arguments>
+<assign>
+<var>${date2}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.593" level="INFO">${date2} = 2014-06-11 10:07:42.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.592" endtime="20200315 20:30:05.593"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date1}</arg>
+<arg>${date2}</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.594" endtime="20200315 20:30:05.595"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date1} ${date2}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.596" level="INFO">2014-06-11 10:07:42.000 2014-06-11 10:07:42.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.595" endtime="20200315 20:30:05.596"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>20140612 12:57</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.598" level="INFO">${date} = 2014-06-12 12:57:00</msg>
+<status status="PASS" starttime="20200315 20:30:05.597" endtime="20200315 20:30:05.598"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>2014-06-12 12:57:00</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.598" endtime="20200315 20:30:05.599"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.600" level="INFO">2014-06-12 12:57:00</msg>
+<status status="PASS" starttime="20200315 20:30:05.599" endtime="20200315 20:30:05.600"></status>
+</kw>
+<status status="PASS" starttime="20200315 20:30:05.585" endtime="20200315 20:30:05.600" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t2" name="Custom timestamp">
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>28.05.2014 12:05</arg>
+<arg>date_format=%d.%m.%Y %H:%M</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.604" level="INFO">${date} = 2014-05-28 12:05:00.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.603" endtime="20200315 20:30:05.604"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>2014-05-28 12:05:00.000</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.604" endtime="20200315 20:30:05.605"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.606" level="INFO">2014-05-28 12:05:00.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.605" endtime="20200315 20:30:05.606"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>result_format=%d.%m.%Y</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.607" level="INFO">${date} = 28.05.2014</msg>
+<status status="PASS" starttime="20200315 20:30:05.606" endtime="20200315 20:30:05.607"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>28.05.2014</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.607" endtime="20200315 20:30:05.608"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.609" level="INFO">28.05.2014</msg>
+<status status="PASS" starttime="20200315 20:30:05.608" endtime="20200315 20:30:05.609"></status>
+</kw>
+<doc>%Y-%m-%d %H:%M:%S.%f, date_format, result_format</doc>
+<status status="PASS" starttime="20200315 20:30:05.601" endtime="20200315 20:30:05.609" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t3" name="Python datetime">
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>2014-06-11 10:07:42.123</arg>
+<arg>datetime</arg>
+</arguments>
+<assign>
+<var>${datetime}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.612" level="INFO">${datetime} = 2014-06-11 10:07:42.123000</msg>
+<status status="PASS" starttime="20200315 20:30:05.611" endtime="20200315 20:30:05.612"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${datetime.year}</arg>
+<arg>2014</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.613" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.613" endtime="20200315 20:30:05.614"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${datetime.month}</arg>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.614" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.614" endtime="20200315 20:30:05.615"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${datetime.day}</arg>
+<arg>11</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.616" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.615" endtime="20200315 20:30:05.616"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${datetime.hour}</arg>
+<arg>10</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.617" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.616" endtime="20200315 20:30:05.617"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${datetime.minute}</arg>
+<arg>7</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.618" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.618" endtime="20200315 20:30:05.619"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${datetime.second}</arg>
+<arg>42</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.620" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.619" endtime="20200315 20:30:05.620"></status>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<arguments>
+<arg>${datetime.microsecond}</arg>
+<arg>123000</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.621" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.621" endtime="20200315 20:30:05.622"></status>
+</kw>
+<doc>Python's standard datetime objects.In input they are recognized
+automatically, and in output it is possible to get them by giving datetime
+value to result_format argument.</doc>
+<status status="PASS" starttime="20200315 20:30:05.610" endtime="20200315 20:30:05.622" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t4" name="Epoch time">
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${1000000000}</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.625" level="INFO">${date} = 2001-09-09 09:46:40.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.624" endtime="20200315 20:30:05.625"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.626" level="INFO">2001-09-09 09:46:40.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.626" endtime="20200315 20:30:05.626"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>2020-03-15 09:16:30.000</arg>
+<arg>epoch</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.628" level="INFO">${date} = 1584234990.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.627" endtime="20200315 20:30:05.628"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Epoch time of 2020-03-15 09:16:30.000 is ${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.629" level="INFO">Epoch time of 2020-03-15 09:16:30.000 is 1584234990.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.629" endtime="20200315 20:30:05.630"></status>
+</kw>
+<doc>Epoch time is the time in seconds since the UNIX epoch.
+i.e. 00:00:00.000 (UTC) 1 January 1970.</doc>
+<status status="PASS" starttime="20200315 20:30:05.623" endtime="20200315 20:30:05.631" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t5" name="Earliest supported date">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>please refer to http://robotframework.org/robotframework/latest/libraries/DateTime.html</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.634" level="INFO">please refer to http://robotframework.org/robotframework/latest/libraries/DateTime.html</msg>
+<status status="PASS" starttime="20200315 20:30:05.633" endtime="20200315 20:30:05.634"></status>
+</kw>
+<doc>Earliest supported date</doc>
+<status status="PASS" starttime="20200315 20:30:05.632" endtime="20200315 20:30:05.634" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t6" name="Time formats: Number">
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>3.14</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.637" level="INFO">${time} = 3.14</msg>
+<status status="PASS" starttime="20200315 20:30:05.636" endtime="20200315 20:30:05.637"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${3.14}</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.638" endtime="20200315 20:30:05.638"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${time}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.639" level="INFO">3.14</msg>
+<status status="PASS" starttime="20200315 20:30:05.639" endtime="20200315 20:30:05.639"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>result_format=number</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.641" level="INFO">${time} = 3.14</msg>
+<status status="PASS" starttime="20200315 20:30:05.640" endtime="20200315 20:30:05.641"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${3.14}</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.641" endtime="20200315 20:30:05.642"></status>
+</kw>
+<doc>Time given as a number is interpreted to be seconds.</doc>
+<status status="PASS" starttime="20200315 20:30:05.635" endtime="20200315 20:30:05.642" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t7" name="Time formats: Time string">
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>1 minute 42 seconds</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.645" level="INFO">${time} = 102.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.645" endtime="20200315 20:30:05.645"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${102}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.647" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.646" endtime="20200315 20:30:05.647"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${time}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.648" level="INFO">102.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.647" endtime="20200315 20:30:05.648"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>4200</arg>
+<arg>verbose</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.649" level="INFO">${time} = 1 hour 10 minutes</msg>
+<status status="PASS" starttime="20200315 20:30:05.649" endtime="20200315 20:30:05.649"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>1 hour 10 minutes</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.650" endtime="20200315 20:30:05.650"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${time}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.651" level="INFO">1 hour 10 minutes</msg>
+<status status="PASS" starttime="20200315 20:30:05.651" endtime="20200315 20:30:05.652"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>- 1.5 hours</arg>
+<arg>compact</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.653" level="INFO">${time} = - 1h 30min</msg>
+<status status="PASS" starttime="20200315 20:30:05.652" endtime="20200315 20:30:05.653"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>- 1h 30min</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.654" endtime="20200315 20:30:05.655"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${time}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.656" level="INFO">- 1h 30min</msg>
+<status status="PASS" starttime="20200315 20:30:05.656" endtime="20200315 20:30:05.657"></status>
+</kw>
+<doc>Time strings are strings in format like 1 minute 42 seconds or 1min 42s.
+The available time specifiers are:
+days, day, d
+hours, hour, h
+minutes, minute, mins, min, m
+seconds, second, sec, sec, s
+milliseconds, millisecond, millis, ms</doc>
+<status status="PASS" starttime="20200315 20:30:05.643" endtime="20200315 20:30:05.657" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t8" name="Time formats: Timer string">
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>01:42</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.660" level="INFO">${time} = 102.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.659" endtime="20200315 20:30:05.660"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${102}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.661" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.661" endtime="20200315 20:30:05.662"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>01:10:00.123</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.663" level="INFO">${time} = 4200.123</msg>
+<status status="PASS" starttime="20200315 20:30:05.662" endtime="20200315 20:30:05.664"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${4200.123}</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.664" endtime="20200315 20:30:05.665"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>102</arg>
+<arg>timer</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.667" level="INFO">${time} = 00:01:42.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.666" endtime="20200315 20:30:05.667"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>00:01:42.000</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.667" endtime="20200315 20:30:05.668"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>-101.567</arg>
+<arg>timer</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.669" level="INFO">${time} = -00:01:42</msg>
+<status status="PASS" starttime="20200315 20:30:05.668" endtime="20200315 20:30:05.669"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>-00:01:42</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.669" endtime="20200315 20:30:05.670"></status>
+</kw>
+<doc>Timer string is a string given in timer
+like format hh:mm:ss.mil</doc>
+<status status="PASS" starttime="20200315 20:30:05.658" endtime="20200315 20:30:05.670" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t9" name="Python timedelta">
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>01:10:02.123</arg>
+<arg>timedelta</arg>
+</arguments>
+<assign>
+<var>${timedelta}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.672" level="INFO">${timedelta} = 1:10:02.123000</msg>
+<status status="PASS" starttime="20200315 20:30:05.672" endtime="20200315 20:30:05.672"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${timedelta.total_seconds()}</arg>
+<arg>${4202.123}</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.673" endtime="20200315 20:30:05.673"></status>
+</kw>
+<doc>Python timedelta</doc>
+<status status="PASS" starttime="20200315 20:30:05.671" endtime="20200315 20:30:05.674" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t10" name="Millisecond handing">
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>2014-06-11 10:07:42</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.677" level="INFO">${date} = 2014-06-11 10:07:42.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.676" endtime="20200315 20:30:05.677"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.678" level="INFO">2014-06-11 10:07:42.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.677" endtime="20200315 20:30:05.678"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>2014-06-11 10:07:42.500</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.679" level="INFO">${date} = 2014-06-11 10:07:43</msg>
+<status status="PASS" starttime="20200315 20:30:05.679" endtime="20200315 20:30:05.679"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.680" level="INFO">2014-06-11 10:07:43</msg>
+<status status="PASS" starttime="20200315 20:30:05.680" endtime="20200315 20:30:05.681"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>2014-06-11 10:07:42.500</arg>
+<arg>datetime</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${dt}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.682" level="INFO">${dt} = 2014-06-11 10:07:43</msg>
+<status status="PASS" starttime="20200315 20:30:05.681" endtime="20200315 20:30:05.682"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${dt}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.683" level="INFO">2014-06-11 10:07:43</msg>
+<status status="PASS" starttime="20200315 20:30:05.683" endtime="20200315 20:30:05.683"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${dt.second}</arg>
+<arg>${43}</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.684" endtime="20200315 20:30:05.684"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${dt.microsecond}</arg>
+<arg>${0}</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.685" endtime="20200315 20:30:05.685"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>102</arg>
+<arg>timer</arg>
+<arg>exclude_millis=false</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.686" level="INFO">${time} = 00:01:42.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.686" endtime="20200315 20:30:05.686"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${time}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.687" level="INFO">00:01:42.000</msg>
+<status status="PASS" starttime="20200315 20:30:05.687" endtime="20200315 20:30:05.687"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>102.567</arg>
+<arg>timer</arg>
+<arg>exclude_millis=true</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.689" level="INFO">${time} = 00:01:43</msg>
+<status status="PASS" starttime="20200315 20:30:05.688" endtime="20200315 20:30:05.689"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${time}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.691" level="INFO">00:01:43</msg>
+<status status="PASS" starttime="20200315 20:30:05.690" endtime="20200315 20:30:05.691"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>00:01:43</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.691" endtime="20200315 20:30:05.692"></status>
+</kw>
+<doc>Millisecond handing</doc>
+<status status="PASS" starttime="20200315 20:30:05.674" endtime="20200315 20:30:05.693" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t11" name="Add Time to Date">
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>2014-05-28 12:05:03.111</arg>
+<arg>7 days</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.695" level="INFO">${date} = 2014-06-04 12:05:03.111</msg>
+<status status="PASS" starttime="20200315 20:30:05.694" endtime="20200315 20:30:05.695"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.696" level="INFO">2014-06-04 12:05:03.111</msg>
+<status status="PASS" starttime="20200315 20:30:05.696" endtime="20200315 20:30:05.696"></status>
+</kw>
+<kw name="Add Time To Date" library="DateTime">
+<doc>Adds time to date and returns the resulting date.</doc>
+<arguments>
+<arg>2014-05-28 12:05:03.111</arg>
+<arg>01:02:03.004</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.697" level="INFO">${date} = 2014-05-28 13:07:06.115</msg>
+<status status="PASS" starttime="20200315 20:30:05.697" endtime="20200315 20:30:05.697"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>2014-05-28 13:07:06.115</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.698" endtime="20200315 20:30:05.698"></status>
+</kw>
+<doc>Adds time to another time</doc>
+<status status="PASS" starttime="20200315 20:30:05.693" endtime="20200315 20:30:05.699" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t12" name="Add Time to Time">
+<kw name="Add Time To Time" library="DateTime">
+<doc>Adds time to another time and returns the resulting time.</doc>
+<arguments>
+<arg>1 minute</arg>
+<arg>42</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.701" level="INFO">${time} = 102.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.700" endtime="20200315 20:30:05.701"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${102}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.702" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.701" endtime="20200315 20:30:05.702"></status>
+</kw>
+<kw name="Add Time To Time" library="DateTime">
+<doc>Adds time to another time and returns the resulting time.</doc>
+<arguments>
+<arg>3 hours 5 minutes</arg>
+<arg>01:02:03</arg>
+<arg>timer</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.703" level="INFO">${time} = 04:07:03</msg>
+<status status="PASS" starttime="20200315 20:30:05.703" endtime="20200315 20:30:05.704"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>04:07:03</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.704" endtime="20200315 20:30:05.705"></status>
+</kw>
+<kw name="Add Time To Time" library="DateTime">
+<doc>Adds time to another time and returns the resulting time.</doc>
+<arguments>
+<arg>3 hours 5 minutes</arg>
+<arg>01:02:03</arg>
+<arg>result_format=number</arg>
+<arg>exclude_millis=yes</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.706" level="INFO">${time} = 14823.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.705" endtime="20200315 20:30:05.706"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${14823}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.707" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.706" endtime="20200315 20:30:05.707"></status>
+</kw>
+<doc>Adds time to another time and returns the resulting time.</doc>
+<status status="PASS" starttime="20200315 20:30:05.699" endtime="20200315 20:30:05.707" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t13" name="Convert Date">
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>20140528 12:05:03.111</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.709" level="INFO">${date} = 2014-05-28 12:05:03.111</msg>
+<status status="PASS" starttime="20200315 20:30:05.709" endtime="20200315 20:30:05.710"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>2014-05-28 12:05:03.111</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.710" endtime="20200315 20:30:05.711"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>epoch</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.712" level="INFO">${date} = 1401249903.111</msg>
+<status status="PASS" starttime="20200315 20:30:05.711" endtime="20200315 20:30:05.712"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.713" level="INFO">1401249903.111</msg>
+<status status="PASS" starttime="20200315 20:30:05.712" endtime="20200315 20:30:05.713"></status>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<doc>Converts between supported `date formats`.</doc>
+<arguments>
+<arg>5.28.2014 12:05</arg>
+<arg>exclude_millis=yes</arg>
+<arg>date_format=%m.%d.%Y %H:%M</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.714" level="INFO">${date} = 2014-05-28 12:05:00</msg>
+<status status="PASS" starttime="20200315 20:30:05.713" endtime="20200315 20:30:05.715"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.716" level="INFO">2014-05-28 12:05:00</msg>
+<status status="PASS" starttime="20200315 20:30:05.715" endtime="20200315 20:30:05.716"></status>
+</kw>
+<doc>Converts between supported date formats</doc>
+<status status="PASS" starttime="20200315 20:30:05.708" endtime="20200315 20:30:05.716" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t14" name="Convert Time">
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>10 seconds</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.719" level="INFO">${time} = 10.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.718" endtime="20200315 20:30:05.719"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${10}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.720" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.720" endtime="20200315 20:30:05.721"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>1:00:01</arg>
+<arg>verbose</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.722" level="INFO">${time} = 1 hour 1 second</msg>
+<status status="PASS" starttime="20200315 20:30:05.721" endtime="20200315 20:30:05.722"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${time}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.723" level="INFO">1 hour 1 second</msg>
+<status status="PASS" starttime="20200315 20:30:05.722" endtime="20200315 20:30:05.723"></status>
+</kw>
+<kw name="Convert Time" library="DateTime">
+<doc>Converts between supported `time formats`.</doc>
+<arguments>
+<arg>${3661.5}</arg>
+<arg>timer</arg>
+<arg>exclude_milles=yes</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.724" level="INFO">${time} = 01:01:02</msg>
+<status status="PASS" starttime="20200315 20:30:05.724" endtime="20200315 20:30:05.725"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${time}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.726" level="INFO">01:01:02</msg>
+<status status="PASS" starttime="20200315 20:30:05.725" endtime="20200315 20:30:05.727"></status>
+</kw>
+<doc>Converts between supported time formats</doc>
+<status status="PASS" starttime="20200315 20:30:05.717" endtime="20200315 20:30:05.727" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t15" name="Get Current Date">
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.731" level="INFO">${date} = 2020-03-15 20:30:05.731</msg>
+<status status="PASS" starttime="20200315 20:30:05.730" endtime="20200315 20:30:05.732"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.735" level="INFO">2020-03-15 20:30:05.731</msg>
+<status status="PASS" starttime="20200315 20:30:05.733" endtime="20200315 20:30:05.736"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.738" level="INFO">${date} = 2020-03-15 12:30:05.737</msg>
+<status status="PASS" starttime="20200315 20:30:05.737" endtime="20200315 20:30:05.738"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.740" level="INFO">2020-03-15 12:30:05.737</msg>
+<status status="PASS" starttime="20200315 20:30:05.739" endtime="20200315 20:30:05.740"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>increment=02:30:00</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.741" level="INFO">${date} = 2020-03-15 23:00:05.741</msg>
+<status status="PASS" starttime="20200315 20:30:05.741" endtime="20200315 20:30:05.742"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.743" level="INFO">2020-03-15 23:00:05.741</msg>
+<status status="PASS" starttime="20200315 20:30:05.742" endtime="20200315 20:30:05.743"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>UTC</arg>
+<arg>-5hours</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.744" level="INFO">${date} = 2020-03-15 07:30:05.744</msg>
+<status status="PASS" starttime="20200315 20:30:05.744" endtime="20200315 20:30:05.745"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.746" level="INFO">2020-03-15 07:30:05.744</msg>
+<status status="PASS" starttime="20200315 20:30:05.745" endtime="20200315 20:30:05.746"></status>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<arguments>
+<arg>result_format=datetime</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.747" level="INFO">${date} = 2020-03-15 20:30:05.747362</msg>
+<status status="PASS" starttime="20200315 20:30:05.747" endtime="20200315 20:30:05.747"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.748" level="INFO">2020-03-15 20:30:05.747362</msg>
+<status status="PASS" starttime="20200315 20:30:05.748" endtime="20200315 20:30:05.749"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date.year}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.750" level="INFO">2020</msg>
+<status status="PASS" starttime="20200315 20:30:05.749" endtime="20200315 20:30:05.750"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${date.month}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.751" level="INFO">3</msg>
+<status status="PASS" starttime="20200315 20:30:05.751" endtime="20200315 20:30:05.752"></status>
+</kw>
+<doc>Returns current local or UTC time with an optional increment</doc>
+<status status="PASS" starttime="20200315 20:30:05.728" endtime="20200315 20:30:05.752" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t16" name="Subtract Date From Date">
+<kw name="Subtract Date From Date" library="DateTime">
+<doc>Subtracts date from another date and returns time between.</doc>
+<arguments>
+<arg>2014-05-28 12:05:52</arg>
+<arg>2014-05-28 12:05:10</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.755" level="INFO">${time} = 42.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.754" endtime="20200315 20:30:05.755"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${42}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.756" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.756" endtime="20200315 20:30:05.757"></status>
+</kw>
+<kw name="Subtract Date From Date" library="DateTime">
+<doc>Subtracts date from another date and returns time between.</doc>
+<arguments>
+<arg>2014-05-28 12:05:52</arg>
+<arg>2014-05-27 12:05:10</arg>
+<arg>verbose</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.758" level="INFO">${time} = 1 day 42 seconds</msg>
+<status status="PASS" starttime="20200315 20:30:05.757" endtime="20200315 20:30:05.758"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>1 day 42 seconds</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.759" endtime="20200315 20:30:05.761"></status>
+</kw>
+<doc>Subtracts date from another date and returns time between</doc>
+<status status="PASS" starttime="20200315 20:30:05.753" endtime="20200315 20:30:05.761" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t17" name="Subtract Time From Date">
+<kw name="Subtract Time From Date" library="DateTime">
+<doc>Subtracts time from date and returns the resulting date.</doc>
+<arguments>
+<arg>2014-06-04 12:05:03.111</arg>
+<arg>7 days</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.765" level="INFO">${date} = 2014-05-28 12:05:03.111</msg>
+<status status="PASS" starttime="20200315 20:30:05.764" endtime="20200315 20:30:05.765"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>2014-05-28 12:05:03.111</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.766" endtime="20200315 20:30:05.767"></status>
+</kw>
+<kw name="Subtract Time From Date" library="DateTime">
+<doc>Subtracts time from date and returns the resulting date.</doc>
+<arguments>
+<arg>2014-05-28 13:07:06.115</arg>
+<arg>01:02:03.004</arg>
+</arguments>
+<assign>
+<var>${date}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.768" level="INFO">${date} = 2014-05-28 12:05:03.111</msg>
+<status status="PASS" starttime="20200315 20:30:05.767" endtime="20200315 20:30:05.769"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${date}</arg>
+<arg>2014-05-28 12:05:03.111</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.769" endtime="20200315 20:30:05.770"></status>
+</kw>
+<doc>Subtracts time from date and returns the resulting date</doc>
+<status status="PASS" starttime="20200315 20:30:05.762" endtime="20200315 20:30:05.771" critical="yes"></status>
+</test>
+<test id="s1-s1-s1-t18" name="Subtract Time From Time">
+<kw name="Subtract Time From Time" library="DateTime">
+<doc>Subtracts time from another time and returns the resulting time.</doc>
+<arguments>
+<arg>00:02:30</arg>
+<arg>100</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.774" level="INFO">${time} = 50.0</msg>
+<status status="PASS" starttime="20200315 20:30:05.773" endtime="20200315 20:30:05.775"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>${50}</arg>
+</arguments>
+<msg timestamp="20200315 20:30:05.777" level="INFO">Argument types are:
+&lt;class 'float'&gt;
+&lt;class 'int'&gt;</msg>
+<status status="PASS" starttime="20200315 20:30:05.776" endtime="20200315 20:30:05.778"></status>
+</kw>
+<kw name="Subtract Time From Time" library="DateTime">
+<doc>Subtracts time from another time and returns the resulting time.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>1 minute</arg>
+<arg>compact</arg>
+</arguments>
+<assign>
+<var>${time}</var>
+</assign>
+<msg timestamp="20200315 20:30:05.780" level="INFO">${time} = - 10s</msg>
+<status status="PASS" starttime="20200315 20:30:05.778" endtime="20200315 20:30:05.780"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${time}</arg>
+<arg>- 10s</arg>
+</arguments>
+<status status="PASS" starttime="20200315 20:30:05.780" endtime="20200315 20:30:05.781"></status>
+</kw>
+<doc>Subtracts time from another time and returns the resulting time</doc>
+<status status="PASS" starttime="20200315 20:30:05.772" endtime="20200315 20:30:05.782" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20200315 20:30:05.579" endtime="20200315 20:30:05.783"></status>
+</suite>
+<status status="PASS" starttime="20200315 20:30:05.576" endtime="20200315 20:30:05.790"></status>
+</suite>
+<status status="PASS" starttime="20200315 20:30:05.539" endtime="20200315 20:30:05.812"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="18" fail="0">Critical Tests</stat>
+<stat pass="18" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="18" fail="0" id="s1" name="UserGuide">UserGuide</stat>
+<stat pass="18" fail="0" id="s1-s1" name="Tests">UserGuide.Tests</stat>
+<stat pass="18" fail="0" id="s1-s1-s1" name="Datetime Example01">UserGuide.Tests.Datetime Example01</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
